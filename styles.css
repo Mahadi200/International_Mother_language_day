@@ -13,22 +13,25 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 50px;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 input {
@@ -38,6 +41,7 @@ input {
     border: none;
     border-radius: 5px;
     text-align: center;
+    width: 100%;
 }
 
 #message-container {
@@ -47,22 +51,23 @@ input {
 }
 
 #message {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #FFD700;
     background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     border-left: 5px solid red;
     border-right: 5px solid green;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     animation: fadeIn 1.5s ease-in-out, glow 1.5s infinite alternate;
-    line-height: 1.8;
+    line-height: 1.5;
 }
 
 #febImage {
-    width: 250px;
+    width: 80%;
+    max-width: 300px;
     margin-top: 15px;
     opacity: 0;
     transform: scale(0.8);
@@ -94,10 +99,17 @@ input {
     }
 }
 
+/* Footer Fixed to Bottom */
 footer {
-    position: absolute;
-    bottom: 10px;
+    width: 100%;
     text-align: center;
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    color: white;
+    font-size: 0.9rem;
+    opacity: ;
 }
 
 .social-links a {
@@ -109,4 +121,16 @@ footer {
 
 .social-links a:hover {
     color: yellow;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #message {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
 }
